@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components';
 import Slider from 'react-slick'
@@ -19,11 +20,27 @@ function ImgSlider() {
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src="/images/slider-badging.jpg" />
+                <img src="/images/slide1.jpg" />
             </Wrap>
             <Wrap>
-                <img src="/images/slider-badag.jpg" />
+                <img src="/images/slide2.jpg" />
             </Wrap>
+            <Wrap>
+                <img src="/images/slide3.jpg" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slide4.jpg" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slide5.jpg" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slide6.jpg" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slide7.jpg" />
+            </Wrap>
+
         </Carousel>
     )
 }
