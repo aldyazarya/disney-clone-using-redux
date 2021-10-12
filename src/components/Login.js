@@ -5,6 +5,7 @@ import Banner from "./Login/Banner";
 import DownloadNow from "./Login/DownloadNow";
 import GroupWatch from "./Login/GroupWatch";
 import MarvelStudio from "./Login/MarvelStudio";
+import GridTheme from './Login/GridTheme'
 
 function Login() {
   return (
@@ -14,6 +15,7 @@ function Login() {
         <Stream/>
         <GroupWatch />
         <MarvelStudio />
+        <GridTheme />
         <DownloadNow />
       </Main>
     </>
