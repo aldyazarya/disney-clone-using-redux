@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Stream from "./Login/Stream";
 import Banner from "./Login/Banner";
 import DownloadNow from "./Login/DownloadNow";
+import GroupWatch from "./Login/GroupWatch";
 
 function Login() {
   return (
@@ -10,6 +11,7 @@ function Login() {
       <Main>
         <Banner />
         <Stream/>
+        <GroupWatch />
         <DownloadNow />
       </Main>
     </>

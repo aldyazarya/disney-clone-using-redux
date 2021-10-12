@@ -5,6 +5,14 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import slide1 from '../images/slide1.jpg'
+import slide2 from '../images/slide2.jpg'
+import slide3 from '../images/slide3.jpg'
+import slide4 from '../images/slide4.jpg'
+import slide5 from '../images/slide5.jpg'
+import slide6 from '../images/slide6.jpg'
+import slide7 from '../images/slide7.jpg'
+
 function ImgSlider() {
 
     let settings ={
@@ -20,25 +28,25 @@ function ImgSlider() {
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src="/images/slide1.jpg" />
+                <img src={slide1} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide2.jpg" />
+                <img src={slide2} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide3.jpg" />
+                <img src={slide3} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide4.jpg" />
+                <img src={slide4} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide5.jpg" />
+                <img src={slide5} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide6.jpg" />
+                <img src={slide6} />
             </Wrap>
             <Wrap>
-                <img src="/images/slide7.jpg" />
+                <img src={slide7} />
             </Wrap>
 
         </Carousel>

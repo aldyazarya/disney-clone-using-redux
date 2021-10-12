@@ -1,19 +1,23 @@
 import React from 'react'
 import styled from 'styled-components';
 
+import ctaOne from '../../images/cta-logo-one.svg'
+import ctaTwo from '../../images/cta-logo-two.png'
+import bgLogin from '../../images/login-background.jpg'
+
 function Banner() {
     return (
     <>
         <Container>
         <CTA>
-          <CTALogoOne src="/images/cta-logo-one.svg" />
+          <CTALogoOne src={ctaOne} />
           <SignUp>GET ALL THERE</SignUp>
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee
             with a Disney+ subscription. As of 03/26/21, the price of Disney+ and
             The Disney Bundle will increase by $1.
           </Description>
-          <CTALogoTwo src="/images/cta-logo-two.png" />
+          <CTALogoTwo src={ctaTwo} />
         </CTA>
       </Container>
     </>
@@ -36,7 +40,7 @@ const Container = styled.div`
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/images/login-background.jpg");
+    background-image: url(${bgLogin});
     position: absolute;
     content: "";
     top: 0;

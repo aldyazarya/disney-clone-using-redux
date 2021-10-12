@@ -5,16 +5,12 @@ import axios from 'axios'
 import ImgSlider from "./ImgSlider";
 import Viewers from "./Viewers";
 import Movies from "./Movies";
-// import db from "../firebase";
 
 
-// APIKEY TMDB
-const api_key = "75bd6d62c369e1e7a1248bcfb83f8ca6"
-const base_url = "https://api.themoviedb.org/3"
+import bgImg from '../images/home-background.png'
 
 function Home() {
 
-  const [data, setData] = useState([])
 
 
   return (
@@ -35,7 +31,7 @@ const Container = styled.main`
   overflow-x: hidden;
 
   &:before {
-    background: url("/images/home-background.png") center center / cover
+    background: url(${bgImg}) center center / cover
       no-repeat fixed;
     content: "";
     position: absolute;

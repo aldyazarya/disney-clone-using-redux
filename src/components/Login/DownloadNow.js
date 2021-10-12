@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import devices from '../../images/Devices.png'
+
 function DownloadNow() {
   return (
     <>
@@ -19,7 +21,7 @@ function DownloadNow() {
             </button>
           </TextInfo>
           <ImgInfo>
-            <img src="/images/Devices.png" />
+            <img src={devices} />
           </ImgInfo>
         </Container>
       </Section>

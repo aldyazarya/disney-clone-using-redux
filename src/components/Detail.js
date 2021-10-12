@@ -2,6 +2,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import playBlack from '../images/play-icon-black.png'
+import playWhite from '../images/play-icon-white.png'
+import groupIcon from '../images/group-icon.png'
+
 function Detail() {
   return (
     <Container>
@@ -13,18 +17,18 @@ function Detail() {
       </ImageTitle>
       <Controls>
         <PlayButton>
-          <img src="/images/play-icon-black.png" />
+          <img src={playBlack} />
           <span>PLAY</span>
         </PlayButton>
         <TrailerButton>
-          <img src="/images/play-icon-white.png" />
+          <img src={playWhite} />
           <span>Trailer</span>
         </TrailerButton>
         <AddButton>
           <span>+</span>
         </AddButton>
         <GroupWatchButton>
-          <img src="/images/group-icon.png" />
+          <img src={groupIcon} />
         </GroupWatchButton>
       </Controls>
       <SubTitle>2018 | 7m | Family, Fantasy, Kids, Animation</SubTitle>

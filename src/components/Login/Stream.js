@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import stream from '../../images/stream.jpg'
+
 function Stream() {
   return (
     <>
@@ -17,7 +19,7 @@ function Stream() {
             <button type="button" className="btn-theme-disney">Preorder</button>
           </TextInfo>
           <ImgInfo>
-            <img src="/images/stream.jpg" />
+            <img src={stream} />
           </ImgInfo>
         </Container>
       </Section>
