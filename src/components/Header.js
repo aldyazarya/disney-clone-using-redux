@@ -93,9 +93,12 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 36px;
   overflow-x: hidden;
-  position: fixed;
   z-index: 10;
   width: 100%;
+
+  @media screen  and (min-width: 280px) and (max-width: 991px) {
+   justify-content: space-between;
+  }
   
 `;
 const Logo = styled.img`
@@ -103,6 +106,11 @@ const Logo = styled.img`
 `;
 
 const NavMenu = styled.div`
+
+  @media screen  and (min-width: 280px) and (max-width: 991px) {
+    display:none;
+  }
+
   display: flex;
   flex: 1;
   margin-left: 25px;

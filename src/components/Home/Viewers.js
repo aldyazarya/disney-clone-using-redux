@@ -34,11 +34,15 @@ const Container = styled.div`
   padding: 30px 0px 26px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 15px;
+    gap: 15px;
   }
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  @media screen and (max-width: 767px)  {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 11px;
+    gap: 11px;
   }
 `;
 

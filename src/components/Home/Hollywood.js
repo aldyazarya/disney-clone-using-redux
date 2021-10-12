@@ -1,4 +1,3 @@
-
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
@@ -16,6 +15,13 @@ function Hollywood() {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
+    responsive: [
+        {breakpoint: 1200, settings: { slidesToShow: 5 }},
+        {breakpoint: 1024, settings: { slidesToShow: 4 }},
+        {breakpoint: 991, settings: { slidesToShow: 3 }},
+        {breakpoint: 767, settings: { slidesToShow: 2 }},
+        {breakpoint: 425, settings: { slidesToShow: 1 }}
+    ]
   };
 
   return (
@@ -224,9 +230,7 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
     z-index: 2000;
     opacity: 1;
-    padding:1px;
+    padding: 1px;
     transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-
-    
   }
 `;

@@ -32,7 +32,7 @@ function ImgSlider() {
 export default ImgSlider;
 
 const Carousel = styled(Slider)`
-  margin-top: 70px;
+  /* margin-top: 70px; */
 
   ul li button {
     &:before {
@@ -62,11 +62,11 @@ const Carousel = styled(Slider)`
   }
 
   .slick-prev {
-    left: -75px;
+    left: -70px;
   }
 
   .slick-next {
-    right: -75px;
+    right: -70px;
   }
 
   .slick-list {
@@ -87,6 +87,17 @@ const Wrap = styled.div`
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     transition-duration: 300ms;
+
+    @media screen and (min-width: 375px) and (max-width: 550px) {
+    width: 100%;
+    height: 15vh;
+    object-fit: fill;
+  }
+    @media screen and (min-width: 280px) and (max-width: 375px) {
+    width: 100%;
+    height: 17vh;
+    object-fit: fill;
+  }
 
     &:hover {
       padding: 1px;
