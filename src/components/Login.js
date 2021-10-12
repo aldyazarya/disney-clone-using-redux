@@ -4,6 +4,7 @@ import Stream from "./Login/Stream";
 import Banner from "./Login/Banner";
 import DownloadNow from "./Login/DownloadNow";
 import GroupWatch from "./Login/GroupWatch";
+import MarvelStudio from "./Login/MarvelStudio";
 
 function Login() {
   return (
@@ -12,6 +13,7 @@ function Login() {
         <Banner />
         <Stream/>
         <GroupWatch />
+        <MarvelStudio />
         <DownloadNow />
       </Main>
     </>
