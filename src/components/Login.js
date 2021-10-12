@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Stream from "./Login/Stream";
 import Banner from "./Login/Banner";
+import DownloadNow from "./Login/DownloadNow";
 
 function Login() {
   return (
@@ -9,6 +10,7 @@ function Login() {
       <Main>
         <Banner />
         <Stream/>
+        <DownloadNow />
       </Main>
     </>
 

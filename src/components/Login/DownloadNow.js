@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-function Stream() {
+function DownloadNow() {
   return (
     <>
       <Section>
         <Container>
           <TextInfo>
-            <h1 className="disney-titles">Stream with Premier Access the</h1>
-            <h1 className="disney-titles">same day it's in theaters</h1>
+            <h1 className="disney-titles">Stream Now or Download Now</h1>
+            <h1 className="disney-titles">Explore US More on Disney</h1>
             <p>
-              Comming May 28 Get Premier Access to cruella for $29.99 with
-              Disney+ subscription, and watch as many times as you like before
-              it's available to all Disney+ subscribers at a later date.
+              Stream on 4 Devices at once or Download Your Favorites to Watch
+              Later. With dozen of titles stunning 4K UHD, you can watch the way
+              you always wished.
             </p>
-            <button type="button" className="btn-theme-disney">Preorder</button>
+            <button type="button" className="btn-theme-disney">
+              Download Now
+            </button>
           </TextInfo>
           <ImgInfo>
-            <img src="/images/stream.jpg" />
+            <img src="/images/Devices.png" />
           </ImgInfo>
         </Container>
       </Section>
@@ -25,7 +27,7 @@ function Stream() {
   );
 }
 
-export default Stream;
+export default DownloadNow;
 
 const Section = styled.div`
   padding: 50px 5%;
@@ -42,7 +44,7 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
 
   @media screen and (max-width: 991px) {
@@ -94,16 +96,20 @@ const ImgInfo = styled.div`
     width: 100%;
     max-width: 600px;
     height: auto;
+    
+
 
     @media screen and (min-width: 500px) and (max-width: 1200px) {
       height: auto;
       width: 100%;
       object-fit: contain;
+      margin-top: 3vh;
     }
     @media screen and (min-width: 280px) and (max-width: 500px) {
-      height: 31vh;
+      height: 25vh;
       width: 100%;
       object-fit: contain;
+      margin-top: 3vh;
     }
   }
 `;
