@@ -2,19 +2,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import viewersDisney from '../images/viewers-disney.png'
-import viewersPixar from '../images/viewers-pixar.png'
-import viewersMarvel from '../images/viewers-marvel.png'
-import viewersStarWars from '../images/viewers-starwars.png'
-import viewersNational from '../images/viewers-national.png'
+import viewersDisney from "../images/viewers-disney.png";
+import viewersPixar from "../images/viewers-pixar.png";
+import viewersMarvel from "../images/viewers-marvel.png";
+import viewersStarWars from "../images/viewers-starwars.png";
+import viewersNational from "../images/viewers-national.png";
 
-import videoDisney from '../videos/1564674844-disney.mp4'
-import videoPixar from '../videos/1564676714-pixar.mp4'
-import videoMarvel from '../videos/1564676115-marvel.mp4'
-import videoStarWars from '../videos/1608229455-star-wars.mp4'
-import videoNational from '../videos/1564676296-national-geographic.mp4'
-
-
+import videoDisney from "../videos/1564674844-disney.mp4";
+import videoPixar from "../videos/1564676714-pixar.mp4";
+import videoMarvel from "../videos/1564676115-marvel.mp4";
+import videoStarWars from "../videos/1608229455-star-wars.mp4";
+import videoNational from "../videos/1564676296-national-geographic.mp4";
 
 function Viewers() {
   return (
@@ -46,10 +44,7 @@ function Viewers() {
       <Wrap>
         <img src={viewersNational} />
         <video autoPlay={true} loop={true} playsInline={true}>
-          <source
-            src={videoNational}
-            type="video/mp4"
-          />
+          <source src={videoNational} type="video/mp4" />
         </video>
       </Wrap>
     </Container>
