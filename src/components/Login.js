@@ -6,6 +6,7 @@ import DownloadNow from "./Login/DownloadNow";
 import GroupWatch from "./Login/GroupWatch";
 import MarvelStudio from "./Login/MarvelStudio";
 import GridTheme from './Login/GridTheme'
+import Devices from "./Login/Devices";
 
 function Login() {
   return (
@@ -17,6 +18,7 @@ function Login() {
         <MarvelStudio />
         <GridTheme />
         <DownloadNow />
+        <Devices />
       </Main>
     </>
 
