@@ -177,8 +177,8 @@ const UserAuth = styled.div`
 
 const PopupMenu = styled.div`
   position: absolute;
-  top: 7vh;
-  right: 3.5rem;
+  top: 5vh;
+  right: 2.45rem;
   z-index: 1;
   padding: 0.5rem 1rem;
   background-color: #040714;
