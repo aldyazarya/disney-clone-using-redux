@@ -1,5 +1,6 @@
 /* eslint-disable import/first */
-//////////////////// Slider brand API ////////////////////
+
+//  Image Slider API
 import slide1 from "../../images/slide1.jpg";
 import slide2 from "../../images/slide2.jpg";
 import slide3 from "../../images/slide3.jpg";
@@ -18,7 +19,6 @@ export const sliderAPI = [
   { bannerImg: slide7 },
 ];
 
-/* //////////////////////// */
 // Viewers Brand API
 import img1 from "../../images/viewers-disney.png";
 import img2 from "../../images/viewers-pixar.png";

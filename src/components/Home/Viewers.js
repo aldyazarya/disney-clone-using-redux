@@ -30,6 +30,7 @@ const Container = styled.div`
   margin-top: 30px;
   display: grid;
   grid-gap: 25px;
+  gap: 25px;
   padding: 30px 0px 26px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 
@@ -72,6 +73,7 @@ const Wrap = styled.div`
     top: 0px;
     opacity: 0;
     z-index: 0;
+    object-fit: cover;
   }
 
   &:hover {
@@ -81,6 +83,7 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
     video {
       opacity: 1;
+      z-index: 1;
     }
   }
 `;

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import ImgSlider from "./Home/ImgSlider";
 import Viewers from "./Home/Viewers";
-import Movies from "./Home/Movies";
+import Original from "./Home/Original";
 
 
 import bgImg from '../images/home-background.png'
@@ -17,7 +17,7 @@ function Home() {
     <Container>
       <ImgSlider />
       <Viewers />
-      <Movies />
+      <Original />
     </Container>
   );
 }
