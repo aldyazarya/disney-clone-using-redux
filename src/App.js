@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/Header";
@@ -14,15 +14,16 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/login">
+          <Route exact path="/">
             <Login />
           </Route>
-          <Route path="/detail">
+          <Route path="/detail/:id">
             <Detail />
           </Route>
-          <Route path="/">
+          <Route exact path="/home">
             <Home />
           </Route>
+          <Redirect to="/" />
         </Switch>
         <Footer />
       </Router>

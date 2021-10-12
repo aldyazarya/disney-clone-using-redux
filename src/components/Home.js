@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from 'axios'
 
-import ImgSlider from "./ImgSlider";
-import Viewers from "./Viewers";
-import Movies from "./Movies";
+import ImgSlider from "./Home/ImgSlider";
+import Viewers from "./Home/Viewers";
+import Movies from "./Home/Movies";
 
 
 import bgImg from '../images/home-background.png'
@@ -25,10 +25,11 @@ function Home() {
 export default Home;
 
 const Container = styled.main`
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 250px);
   padding: 0 calc(3.5vw + 5px);
   position: relative;
   overflow-x: hidden;
+  display: block;
 
   &:before {
     background: url(${bgImg}) center center / cover

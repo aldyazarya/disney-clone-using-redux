@@ -1,47 +1,85 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-import logo from '../images/logo.svg'
-import search from '../images/search-icon.svg'
-import home from '../images/home-icon.svg'
-import watchlist from '../images/watchlist-icon.svg'
-import original from '../images/original-icon.svg'
-import movies from '../images/movie-icon.svg'
-import series from '../images/series-icon.svg'
+import logo from "../images/logo.svg";
+import search from "../images/search-icon.svg";
+import home from "../images/home-icon.svg";
+import watchlist from "../images/watchlist-icon.svg";
+import original from "../images/original-icon.svg";
+import movies from "../images/movie-icon.svg";
+import series from "../images/series-icon.svg";
+import signout from "../images/shutdown.svg";
 
 function Header() {
+  const [Toggler, setToggler] = useState(false); // false -> notActive
+  const ifPopupOpen = () => setToggler(!Toggler); // true -> activeState
+
   return (
     <Nav>
-      <Logo src={logo} />
+      <NavLink to="/">
+        <Logo src={logo} />
+      </NavLink>
+
       <NavMenu>
-        <a>
-          <img src={home} />
-          <span>HOME</span>
-        </a>
-        <a>
-          <img src={search} />
-          <span>SEARCH</span>
-        </a>
-        <a>
-          <img src={watchlist} />
-          <span>WATCHLIST</span>
-        </a>
-        <a>
-          <img src={original} />
-          <span>ORIGINAL</span>
-        </a>
-        <a>
-          <img src={movies} />
-          <span>MOVIES</span>
-        </a>
-        <a>
-          <img src={series} />
-          <span>SERIES</span>
-        </a>
+        <NavLink to="/home" className="nav-link">
+          <a>
+            <img src={home} />
+            <span>HOME</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <img src={search} />
+            <span>SEARCH</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <img src={watchlist} />
+            <span>WATCHLIST</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <img src={original} />
+            <span>ORIGINAL</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <img src={movies} />
+            <span>MOVIES</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <img src={series} />
+            <span>SERIES</span>
+          </a>
+        </NavLink>
       </NavMenu>
-      <UserImg src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" />
+      <UserAuth>
+        <img
+          onClick={ifPopupOpen}
+          src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg"
+        />
+      </UserAuth>
+
+      <PopupMenu activeState={Toggler}>
+        <NavLink to="" className="nav-link">
+          <a>
+            <span>HOME</span>
+          </a>
+        </NavLink>
+        <NavLink to="" className="nav-link">
+          <a>
+            <span>SIGN OUT</span>
+          </a>
+        </NavLink>
+      </PopupMenu>
     </Nav>
   );
 }
@@ -55,6 +93,10 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 36px;
   overflow-x: hidden;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  
 `;
 const Logo = styled.img`
   width: 80px;
@@ -65,6 +107,12 @@ const NavMenu = styled.div`
   flex: 1;
   margin-left: 25px;
   align-items: center;
+  color: white;
+
+  > .nav-link {
+    text-decoration: none;
+    color: white;
+  }
 
   a {
     display: flex;
@@ -104,9 +152,59 @@ const NavMenu = styled.div`
   }
 `;
 
-const UserImg = styled.img`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+const UserAuth = styled.div`
+  width: 50px;
+  height: 50px;
+  object-position: center;
   cursor: pointer;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+`;
+
+const PopupMenu = styled.div`
+  position: absolute;
+  top: 7vh;
+  right: 3.5rem;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background-color: #040714;
+  border-radius: 0.345rem;
+  border: 1.3px solid rgba(151, 151, 151, 1);
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 19px 0px;
+
+  display: ${(event) => (event.activeState ? "flex" : "none")};
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  > .nav-link {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1.3px solid rgba(151, 151, 151, 1);
+
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    /* padding: 0 12px; */
+    cursor: pointer;
+
+    span {
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      position: relative;
+      padding-bottom: 5px;
+    }
+  }
 `;
