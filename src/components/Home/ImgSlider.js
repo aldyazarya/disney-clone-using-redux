@@ -76,11 +76,10 @@ const Carousel = styled(Slider)`
 
 const Wrap = styled.div`
   cursor: default;
-  border-radius: 4px;
 
   img {
     border: 4px solid transparent;
-    border-radius: 4px;
+    border-radius: 10px ;
     width: 100%;
     height: 100%;
     object-fit: cover;

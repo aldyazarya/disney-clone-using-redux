@@ -93,8 +93,9 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 36px;
   overflow-x: hidden;
-  z-index: 10;
+  z-index: 2500;
   width: 100%;
+  opacity: 1;
 
   @media screen  and (min-width: 280px) and (max-width: 991px) {
    justify-content: space-between;

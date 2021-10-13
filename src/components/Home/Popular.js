@@ -36,7 +36,7 @@ function Popular() {
             movies.map((value, index) => (
               <Wrap key={index}>
                 <div>
-                  <NavLink to="/">
+                  <NavLink to={`/detail/${value.id}`}>
                     <img src={value.CardImg} alt={value.Title} />
                   </NavLink>
                 </div>
@@ -125,11 +125,13 @@ const Wrap = styled.div`
   img {
     width: 100%;
     display: block;
-    height: 15vh;
+    height: auto;
     object-fit: fill;
     width: 100%;
     z-index: 1500;
     position: relative;
+    border-radius: 4px;
+
 
     @media screen and (max-width: 991px) {
       width: 100%;
