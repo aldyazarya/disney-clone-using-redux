@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { store } from './app/store';
-import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
-
+import { Provider } from 'react-redux';
 import { Store } from './components/Redux/Store/Store.js'
+
+import {getLCP, getFID, getCLS} from 'web-vitals';
+
+getCLS(console.log);
+getFID(console.log);
+getLCP(console.log);
+
 
 
 ReactDOM.render(

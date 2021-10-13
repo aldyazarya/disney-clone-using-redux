@@ -5,8 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-import lucaImg from "../../images/LUCA-2.png";
 import { selectTrending } from "../Redux/Reducers/MovieReducer";
 
 function Trending() {

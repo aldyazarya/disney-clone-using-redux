@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import axios from "axios";
 import dbConfig from "../Firebase";
 import { useDispatch } from "react-redux";
 
