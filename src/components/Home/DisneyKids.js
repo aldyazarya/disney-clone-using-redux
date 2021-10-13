@@ -4,10 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
-
-import lucaImg from "../../images/LUCA-2.png";
+import { useSelector } from "react-redux";
+import { selectKidsTv } from "../Redux/Reducers/MovieReducer";
 
 function DisneyKids() {
+  const movies = useSelector(selectKidsTv);
+
   let settings = {
     dots: false,
     infinite: true,
@@ -16,12 +18,12 @@ function DisneyKids() {
     slidesToScroll: 1,
     autoplay: false,
     responsive: [
-        {breakpoint: 1200, settings: { slidesToShow: 5 }},
-        {breakpoint: 1024, settings: { slidesToShow: 4 }},
-        {breakpoint: 991, settings: { slidesToShow: 3 }},
-        {breakpoint: 767, settings: { slidesToShow: 2 }},
-        {breakpoint: 425, settings: { slidesToShow: 1 }}
-    ]
+      { breakpoint: 1200, settings: { slidesToShow: 5 } },
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },
+      { breakpoint: 991, settings: { slidesToShow: 3 } },
+      { breakpoint: 767, settings: { slidesToShow: 2 } },
+      { breakpoint: 425, settings: { slidesToShow: 1 } },
+    ],
   };
 
   return (
@@ -29,104 +31,16 @@ function DisneyKids() {
       <Section>
         <h1>Disney for Kids</h1>
         <Carousel {...settings}>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
+          {movies &&
+            movies.map((value, index) => (
+              <Wrap key={index}>
+                <div>
+                  <NavLink to="/">
+                    <img src={value.CardImg} alt={value.Title} />
+                  </NavLink>
+                </div>
+              </Wrap>
+            ))}
         </Carousel>
       </Section>
     </>

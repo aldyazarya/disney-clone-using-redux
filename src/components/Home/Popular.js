@@ -1,14 +1,16 @@
-
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import lucaImg from "../../images/LUCA-2.png";
+import { selectPopular } from "../Redux/Reducers/MovieReducer";
 
 function Popular() {
+  const movies = useSelector(selectPopular);
+
   let settings = {
     dots: false,
     infinite: true,
@@ -17,12 +19,12 @@ function Popular() {
     slidesToScroll: 1,
     autoplay: false,
     responsive: [
-        {breakpoint: 1200, settings: { slidesToShow: 5 }},
-        {breakpoint: 1024, settings: { slidesToShow: 4 }},
-        {breakpoint: 991, settings: { slidesToShow: 3 }},
-        {breakpoint: 767, settings: { slidesToShow: 2 }},
-        {breakpoint: 425, settings: { slidesToShow: 1 }}
-    ]
+      { breakpoint: 1200, settings: { slidesToShow: 5 } },
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },
+      { breakpoint: 991, settings: { slidesToShow: 3 } },
+      { breakpoint: 767, settings: { slidesToShow: 2 } },
+      { breakpoint: 425, settings: { slidesToShow: 1 } },
+    ],
   };
 
   return (
@@ -30,104 +32,16 @@ function Popular() {
       <Section>
         <h1>Popular</h1>
         <Carousel {...settings}>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
-          <Wrap>
-            <div>
-              <NavLink to="/">
-                <img src={lucaImg} />
-              </NavLink>
-            </div>
-          </Wrap>
+          {movies &&
+            movies.map((value, index) => (
+              <Wrap key={index}>
+                <div>
+                  <NavLink to="/">
+                    <img src={value.CardImg} alt={value.Title} />
+                  </NavLink>
+                </div>
+              </Wrap>
+            ))}
         </Carousel>
       </Section>
     </>
@@ -231,9 +145,7 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
     z-index: 2000;
     opacity: 1;
-    padding:1px;
+    padding: 1px;
     transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-
-    
   }
 `;
